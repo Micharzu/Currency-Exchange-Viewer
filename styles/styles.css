@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 5%;
+}
+
+.app .currency-to-pln-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app .currency-to-pln-list-container ul li {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  min-width: 44vw;
+  font-size: 1.3rem;
+}
+
+.app .currency-to-pln-list-container ul li span {
+  font-family: "Lexend Mega", sans-serif;
+  color: white;
+  padding: 10px 20px;
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(250, 33, 40, 0.7)), to(rgba(238, 34, 79, 0.8)));
+  background: linear-gradient(to right top, rgba(250, 33, 40, 0.7), rgba(238, 34, 79, 0.8));
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.app .currency-to-pln-list-container ul li span:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+  min-width: 17%;
+}
+
+.app .currency-to-pln-list-container ul li span:nth-child(3) {
+  border-radius: 0 20px 20px 0;
+  min-width: 50%;
+}
+
+.app .currency-to-pln-list-container ul li span:nth-child(2) {
+  background: transparent !important;
+  border-radius: 0;
+  padding: 0 15px;
+  color: rgba(250, 33, 40, 0.8);
+}
+
+.app .currency-to-pln-list-container ul li span:nth-child(2) i {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1.6rem;
+}
+
+.app .currency-to-pln-list-container ul li:hover span {
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(250, 33, 40, 0.9)), to(rgba(238, 34, 79, 0.9)));
+  background: linear-gradient(to right top, rgba(250, 33, 40, 0.9), rgba(238, 34, 79, 0.9));
+}
+
+.app .currency-to-pln-list-container ul li:hover span:nth-child(2) {
+  padding: 0 5px;
+  color: #fa2128;
+}
+
+.app .currency-to-pln-list-container ul li:hover span:nth-child(2) i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.app .currency-to-pln-list-container ul li.active span:nth-child(1),
+.app .currency-to-pln-list-container ul li.active span:nth-child(3) {
+  padding: 1rem;
+  min-width: 15%;
+  background: -webkit-gradient(linear, left bottom, right top, from(#fa2128), to(#ee224f)) !important;
+  background: linear-gradient(to right top, #fa2128, #ee224f) !important;
+}
+
+.app .currency-to-pln-list-container ul li.active span:nth-child(2) {
+  padding: 0 5px;
+  color: #fa2128;
+}
+
+.app .currency-to-pln-list-container ul li.active span:nth-child(2) i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.app .chosen-currency-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.app .chosen-currency-list-container ul li {
+  margin: 10px 0;
+  display: block;
+  min-width: 30vw;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background-color: rgba(0, 0, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-transition: min-width 1s 0.6s, background-color 0.3s;
+  transition: min-width 1s 0.6s, background-color 0.3s;
+}
+
+.app .chosen-currency-list-container ul li .data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.app .chosen-currency-list-container ul li .data-container span {
+  font-family: "Lexend Mega", sans-serif;
+  color: rgba(0, 0, 100, 0.6);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.app .chosen-currency-list-container ul li .data-container span:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+.app .chosen-currency-list-container ul li .canvas-container {
+  width: 100%;
+  height: 0;
+  background: white;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  overflow: hidden;
+  position: relative;
+}
+
+.app .chosen-currency-list-container ul li .canvas-container canvas {
+  position: absolute;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.app .chosen-currency-list-container ul li.active {
+  -webkit-transition: min-width 1s, background-color 0.3s;
+  transition: min-width 1s, background-color 0.3s;
+  min-width: 40vw;
+  background-color: rgba(0, 0, 255, 0.6);
+}
+
+.app .chosen-currency-list-container ul li.active:hover {
+  background-color: rgba(0, 0, 255, 0.6);
+}
+
+.app .chosen-currency-list-container ul li.active .data-container span {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.app .chosen-currency-list-container ul li.active .canvas-container {
+  height: 250px;
+  -webkit-transition: 0.6s 1s;
+  transition: 0.6s 1s;
+}
+
+.app .chosen-currency-list-container ul li.active .canvas-container canvas {
+  opacity: 1;
+  -webkit-transition: opacity 0.6s 1.2s;
+  transition: opacity 0.6s 1.2s;
+}
+
+.app .chosen-currency-list-container ul li:hover {
+  background-color: rgba(0, 0, 255, 0.4);
+}
+
+.app .chosen-currency-list-container ul li:hover .data-container span {
+  color: rgba(0, 0, 100, 0.8);
+}
+/*# sourceMappingURL=styles.css.map */
